@@ -4,13 +4,20 @@
 
 ## 1. 消息队列介绍：
 - `消息队列`是MQ是一种系统间相互写作的通信机制
+
+  
+
 ![在这里插入图片描述](https://weiyunshu1994-picgo-img.oss-cn-shenzhen.aliyuncs.com/Typora_20210620173556938.png)
+
 - Broker：消息处理中心，负责消息的接收、存储、转发等；
 - Producer：消息生产者，负责产生和发送消息到消息处理中心；
 - Consumer：消息消费者，负责从消息处理中心获取消息，并进行相应的处理。
 
 ## 2. java设计一个简单的消息队列
 其结构如下所示：
+
+
+
 ![在这里插入图片描述](https://weiyunshu1994-picgo-img.oss-cn-shenzhen.aliyuncs.com/Typora_20210620213430134.png)
 
 ### 2.1 消息处理中心
@@ -155,6 +162,11 @@ public class ConsumeClient {
 ```
 ### 2.3 运行效果
 1. 开启BrokerServer服务
+
 2. 生产消息：ProduceClient
+
 3. 消费消息：ConsumeClient
+
+  
+
 ![在这里插入图片描述](https://weiyunshu1994-picgo-img.oss-cn-shenzhen.aliyuncs.com/Typora_Typora_20210620215023941.png)
