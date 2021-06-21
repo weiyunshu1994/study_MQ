@@ -1,6 +1,30 @@
 # Compiled class file
 *.class
 
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+*.class
+*.project
+*.factorypath
+*.nar
+*.ear
+*.rar
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+/bin
+
+/.mvn
+
 # Log file
 *.log
 
@@ -9,10 +33,6 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Idea
-.idea
-.iml
 
 # Package Files #
 *.jar

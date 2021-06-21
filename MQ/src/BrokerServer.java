@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class BrokerServer implements Runnable{
+
     public static int SERVICE_PORT = 9999;
     private final Socket socket;
 
@@ -17,15 +18,14 @@ public class BrokerServer implements Runnable{
         try(
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     socket.getInputStream()));
-            PrintWriter out = new PrintWriter(socket.getOutputStream())
-            ){
+            PrintWriter out = new PrintWriter(socket.getOutputStream()))
+        {
             while (true){
                 String str = in.readLine();
                 if (str == null){
                     continue;
                 }
                 System.out.println("接收到原始数据： " + str);
-
                 if (str.equals("CONSUME")){
                     String message = Broker.consume();
                     out.println(message);
@@ -33,13 +33,10 @@ public class BrokerServer implements Runnable{
                 }else {
                     Broker.produce(str);
                 }
-
             }
-
         } catch (Exception e){
             e.printStackTrace();
         }
-
     }
 
     public static void main(String[] args) throws Exception{
